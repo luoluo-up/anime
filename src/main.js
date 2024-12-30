@@ -1,9 +1,9 @@
-const Koa = require("koa");
-
-const app = new Koa();
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+const db = require("./db/mongodb");
+const app = require("./app");
+db(() => {
+  const { PORT } = require("./config/config.default");
+  // app.listen(PORT, () => {
+  //   console.log(`Server is running on port http://localhost:${PORT}`);
+  // });
 });
-
-modules.exports = app;
+module.exports = app;
