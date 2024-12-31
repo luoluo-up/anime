@@ -6,11 +6,15 @@ module.exports = (success, error) => {
     };
   }
   const mongoose = require("mongoose");
-  const { MONGO_DB, MONGO_URI } = require("../config/config.default");
-  const { mongodbUrl } = process.env;
-  //   const uri = `${MONGO_URI}/${MONGO_DB}`;
-  const uri = `${mongodbUrl}`;
-  mongoose.connect(uri, {
+  const {
+    MONGO_DB,
+    MONGO_URI,
+    mongodbUrl,
+  } = require("../config/config.default");
+  // const uri = `${MONGO_URI}/${MONGO_DB}`;
+  //   const uri = `${mongodbUrl}`;
+  //   console.log(uri);
+  mongoose.connect(mongodbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
