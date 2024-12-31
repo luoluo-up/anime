@@ -14,6 +14,7 @@ module.exports = (success, error) => {
   // const uri = `${MONGO_URI}/${MONGO_DB}`;
   //   const uri = `${mongodbUrl}`;
   //   console.log(uri);
+  // const { mongodbUrl } = process.env;
   mongoose.connect(mongodbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
