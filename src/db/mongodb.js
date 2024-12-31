@@ -13,7 +13,6 @@ module.exports = (success, error) => {
   } = require("../config/config.default");
   // const uri = `${MONGO_URI}/${MONGO_DB}`;
   //   const uri = `${mongodbUrl}`;
-  //   console.log(uri);
   // const { mongodbUrl } = process.env;
   mongoose.connect(mongodbUrl, {
     useNewUrlParser: true,
